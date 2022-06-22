@@ -1,6 +1,6 @@
 # Mass-General-Brigham
 ## Python Questions
-- [ ] 1. Write a python function which returns the maximum of the absolute value of three numbers. Include appropriate error handling.
+- [x] 1. Write a python function which returns the maximum of the absolute value of three numbers. Include appropriate error handling.
 - [ ] 2. Write a python function to extract data between HTML tags using Regex. Your function should accept an input string and a list of HTML tags to look for. Your function should return a list of the extracted data.
 
 ## SQL Questions. 
