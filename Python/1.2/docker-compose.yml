@@ -1,5 +1,5 @@
 services:
-  extract:
+  extractTextFromTags:
     image: eveng1neer/extract
     container_name: extract
     build: .
