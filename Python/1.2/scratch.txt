@@ -1,0 +1,45 @@
+(base) home@Evans-MBP 1.2 % docker build -t extract .
+[+] Building 0.9s (10/10) FINISHED                                                                                                                                                                           
+ => [internal] load build definition from Dockerfile                                                                                                                                                    0.0s
+ => => transferring dockerfile: 275B                                                                                                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                                                                                       0.0s
+ => => transferring context: 70B                                                                                                                                                                        0.0s
+ => [internal] load metadata for docker.io/library/python:3                                                                                                                                             0.8s
+ => [auth] library/python:pull token for registry-1.docker.io                                                                                                                                           0.0s
+ => [internal] load build context                                                                                                                                                                       0.0s
+ => => transferring context: 3.44kB                                                                                                                                                                     0.0s
+ => [1/4] FROM docker.io/library/python:3@sha256:eeed7cac682f9274d183f8a7533ee1360a26acb3616aa712b2be7896f80d8c5f                                                                                       0.0s
+ => CACHED [2/4] WORKDIR /app                                                                                                                                                                           0.0s
+ => CACHED [3/4] COPY . .                                                                                                                                                                               0.0s
+ => CACHED [4/4] RUN pip install -r requirements.txt                                                                                                                                                    0.0s
+ => exporting to image                                                                                                                                                                                  0.0s
+ => => exporting layers                                                                                                                                                                                 0.0s
+ => => writing image sha256:332c009c20feb16c54ec206c836a24494bfcfcb66c6871e2c8720d397dc278f1                                                                                                            0.0s
+ => => naming to docker.io/library/extract                                                                                                                                                              0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+(base) home@Evans-MBP 1.2 % docker image ls
+REPOSITORY           TAG       IMAGE ID       CREATED          SIZE
+eveng1neer/extract   latest    332c009c20fe   5 minutes ago    878MB
+extract              latest    332c009c20fe   5 minutes ago    878MB
+helloworld           latest    09a57ecf0e54   22 minutes ago   867MB
+(base) home@Evans-MBP 1.2 % docker run extract
+usage: extractTextFromTags.py [-h] -u URL -t TAGS [TAGS ...]
+extractTextFromTags.py: error: the following arguments are required: -u/--url, -t/--tags
+(base) home@Evans-MBP 1.2 % docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES
+fede91215b67   extract   "python ./extractTex…"   4 seconds ago   Exited (2) 3 seconds ago             determined_mestorf
+(base) home@Evans-MBP 1.2 % docker rm $(docker ps -aq) 
+fede91215b67
+(base) home@Evans-MBP 1.2 % docker run --rm extract   
+usage: extractTextFromTags.py [-h] -u URL -t TAGS [TAGS ...]
+extractTextFromTags.py: error: the following arguments are required: -u/--url, -t/--tags
+(base) home@Evans-MBP 1.2 % docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+(base) home@Evans-MBP 1.2 % docker run --rm extract -u    
+usage: extractTextFromTags.py [-h] -u URL -t TAGS [TAGS ...]
+extractTextFromTags.py: error: argument -u/--url: expected one argument
+(base) home@Evans-MBP 1.2 % docker run --rm extract -u https://www.google.com
+usage: extractTextFromTags.py [-h] -u URL -t TAGS [TAGS ...]
+extractTextFromTags.py: error: the following arguments are required: -t/--tags
+(base) home@Evans-MBP 1.2 % docker run --rm extract -u https://www.google.com -t html

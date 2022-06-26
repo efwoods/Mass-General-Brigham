@@ -1,8 +1,0 @@
-   ''' 
-    Errors:
-
-    too many arguments
-    wrong type of input
-    too few args
-
-    '''
