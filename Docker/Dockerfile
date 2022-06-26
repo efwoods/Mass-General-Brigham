@@ -1,7 +1,4 @@
 FROM python:3
-
-WORKDIR /usr/src/app
-
+WORKDIR /app
 COPY . .
- 
-CMD ["python", "./HelloWorld.py"]
+ENTRYPOINT [ "python", "./HelloWorld.py" ]

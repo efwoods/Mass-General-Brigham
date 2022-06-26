@@ -1,3 +1,5 @@
 services:
-  helloworld:
+  HelloWorld:
     build: .
+    image: helloworld
+    container_name: helloworld
