@@ -1,3 +1,5 @@
 services:
-  extractFromHTMLTags:
+  extract:
+    image: eveng1neer/extract
+    container_name: extract
     build: .
