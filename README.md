@@ -11,8 +11,8 @@ A group of friends want to track details about their cars so they can coordinate
 - [x] 4. Write an SQL Query that returns a query results, like in question 2.1, where each row contains all information for each person and car based on your new table structure.
 ## Docker Questions
 - [x] 1. Write a basic Docker container that runs a python script that prints ‘Hello World!’ to the console before it exits. Submit your code and Dockerfile/docker-compose.yaml. (complete)
-- [ ] 2. Dockerize your code from question 1.2. You can accept the HTML data as input from the console.
+- [x] 2. Dockerize your code from question 1.2. You can accept the HTML data as input from the console.
 
 ## Algorithm Questions
-- [ ] 1. Write an algorithm to process a large quantity of text files. The files are not homogenous in their format, but each one belongs to one of five categories. To process a file, you need to extract some data from it, and post the result to a server. You can have as many programs (copies of this algorithm) operating on this task in parallel to complete it. How would you design this algorithm? Draw a flow diagram and explain your algorithm. Do not write any code for this question.
-- [ ] 2. Estimate how many panes of glass are in your hometown. Explain your reasoning.
+- [x] 1. Write an algorithm to process a large quantity of text files. The files are not homogenous in their format, but each one belongs to one of five categories. To process a file, you need to extract some data from it, and post the result to a server. You can have as many programs (copies of this algorithm) operating on this task in parallel to complete it. How would you design this algorithm? Draw a flow diagram and explain your algorithm. Do not write any code for this question.
+- [x] 2. Estimate how many panes of glass are in your hometown. Explain your reasoning.
